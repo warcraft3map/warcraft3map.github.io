@@ -1,2 +1,2 @@
 # warcraft3map.github.io
-test
+Моя личная страничка
