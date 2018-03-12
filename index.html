@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Карты Warcraft3</title>
+<meta name="author" content="grylll">
+<meta name="description" content="Карты для warcraft3">
+<link rel="icon" type="image/png" href="icon/favicon.png">
+<style>
+body{
+    background-color: #eeeeee;
+	color: #222;
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;line-height: 20px;}
+.foc{width:156px;border-radius: 2px;border: 1px solid #cccccc; box-shadow: 0 1px 4px #cccccc;}
+.postblock{margin: auto;width: 500px;}
+.post{position:relative;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    background: #fefefe;
+    box-shadow: 0 1px 4px #cccccc;
+	min-width: 500px;
+	max-width: 500px;
+	display: block;
+
+    }
+a{color:#222;}
+#nowrap{white-space: nowrap;}
+.icon{cursor:pointer;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px; box-shadow: 0 1px 4px #cccccc;padding: 5px;margin: 1px;width:24px;height:24px;}
+.icon:hover{background-color: #eeeeee;}
+.iconno{cursor:help;opacity: 0.7;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px;padding: 5px;margin: 1px;width:24px;height:24px;}
+
+#menu_label {transition: all .2s;display:none;}
+.icon:hover ~ #menu_label {transition: all .2s;display:inline;}
+.icon:hover ~ #iconno {display:none;}
+
+
+.post-date {font-style: italic;margin-left: 10px;color: #cccccc;font-size: 8pt; position:absolute;
+ top:0;
+ right:5px;}
+.post-help {text-decoration:underline;cursor:pointer;}
+ 
+.hide{display: none;}
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s;
+	
+border: 1px solid #cccccc;
+    border-radius: 2px;
+    background: #eeeeee;
+    box-shadow: 0 1px 4px #cccccc;
+}
+.modal>div {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    padding: 20px 20px 5px;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-x {
+    font-family: serif;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: 36px;
+    line-height: 25px;
+    text-align: center;
+}
+.modal-x2 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+input:checked+.modal {opacity: 1;right: 0;}
+.button:hover,.modal-x:hover {opacity: 0.7;}
+.modal>div::-webkit-scrollbar {display: none;}
+</style>
+
+</head>
+<body>
+
+<div class="postblock">
+<center id="nowrap"><h2>Лучшие карты WarCraft3 от grylll <a class="icon" href="https://www.epicwar.com/maps/search/?go=1&n=&a=grylll&c=0&pf=1&p=1&tft=1"><img title="Все версии карт" src="icon/search.svg" width="24"></a>
+<a class="icon" href="recommend.html"><img title="grylll рекомендует" src="icon/like.svg" width="24"></a>
+<label class="icon" for="modal2"><img title="Написать автору сайта и карт" src="icon/forum.svg" width="24"></label>
+</h2>
+</center>
+<div class="post">
+<span class="post-date" title="Дата выхода версии карты">12 Mar 2018 12:34</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview4.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Катакомбы</h2>
+<b>Жанр:</b> Выживание<br>
+<b>Версия:</b> 1.8<br>
+<b>Описание:</b> Легион Демонов уничтожил все живое в Азероте. Теперь вы вынуждены скрываться под землей и выживать.<br>
+<br><b>На что похоже:</b> Бродяги, Выжить в Тайге<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/280426/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+</div>
+</div>
+
+<div class="post">
+<span class="post-date" title="Дата выхода версии карты">5 Mar 2018 15:13</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview5.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Тюрьма</h2>
+<b>Жанр:</b> Прочее<br>
+<b>Версия:</b> 2.4<br>
+<b>Описание:</b> Один игрок - тюремщик. Другие игроки - заключенные. Цель тюремщика собрать золото и не допустить бунта и побега зеков. Цель зеков - сбежать.<br>
+<br><b>На что похоже:</b> Зона лайф, Бродяги<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/280202/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+</div>
+</div>
+
+<div class="post">
+<span class="post-date" title="Дата выхода версии карты">1 Mar 2018 18:52</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview2.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>PUBG</h2>
+<b>Жанр:</b> Арена, Прочее<br>
+<b>Версия:</b> 1.7<br>
+<b>Описание:</b> Лутайся, убивай, не выходи за круг! PlayerUnknown's Battlegrounds в WarCraft III!<br>
+<br><b>На что похоже:</b> -<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/280063/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+</div>
+</div>
+
+<div class="post">
+<span class="post-date" title="Дата выхода версии карты">1 Mar 2018 18:52</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview1.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>MagesMustDie</h2>
+<b>Жанр:</b> TAG, Прочее<br>
+<b>Версия:</b> 1.0<br>
+<b>Описание:</b> С гор спустился орк, что бы грабить Академию магов. Задача орка - убить всех магов. Задача магов - любой ценой продержаться 30 минут или вынудить орка сдаться.<br>
+<br><b>На что похоже:</b> Соль и сахар, Маньяк с пилой, Петросянщина, Пропхант<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/280409/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+</div>
+</div>
+
+<div class="post">
+<span class="post-date" title="Дата выхода версии карты">21 Feb 2018 12:57</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview3.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Прятки</h2>
+<b>Жанр:</b> TAG<br>
+<b>Версия:</b> 0.3<br>
+<b>Описание:</b> Гоблины решили вырубить священный живой лес. Для этого им нужно выловить всех энтов-хранителей. Энтам нужно продержаться 30 минут, что бы помешать гоблинам.<br>
+<br><b>На что похоже:</b> Прятки новый лес<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/279846/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+</div>
+</div>
+
+<a class="post" title="Наверх" href="#top"><center>^</center></a>
+</div>
+
+<input class="hide" type="checkbox" id="modal1"/>
+<div class="modal">
+<label class="modal-x2" for="modal1"></label>
+<div>
+<label class="modal-x" for="modal1">&times;</label>
+<h3>Нет видео с прохождением</h3>
+<p>Для этой карты нет видео с прохождением. Но ты можешь записать прохождение и написать <label class="post-help" for="modal2"><a>Cюда</a></label>, тогда я добавлю твое видео к посту.
+</p></div></div>
+
+<input class="hide" type="checkbox" id="modal2"/>
+<div class="modal">
+<label class="modal-x2" for="modal2"></label>
+<div>
+<label class="modal-x" for="modal2">&times;</label>
+<h3>Связь с автором сайта и карт</h3>
+<a target="_blank" href="https://lolifox.org/vg/res/1671+last.html">Написать в тред</a>
+
+</p></div></div>
+
+</body>
+</html>
