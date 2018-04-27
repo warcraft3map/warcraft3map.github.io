@@ -101,20 +101,25 @@ input:checked+.modal {opacity: 1;right: 0;}
 .comment {color: #16a085;margin-left:20px;cursor:pointer;font-weight: bold;}
 .comment:hover {opacity: 0.7}
 
+.head { position: fixed;top:0;left:0;right:0;background: #fff;min-height:20px;z-index:4;border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;}
+a{color:#222;}
+.headicon {cursor:pointer;text-decoration: none;}
 </style>
 
 
 </head>
 <body>
+<div class="head">
+<center>
+<label class="headicon" for="modal2">Связь с автором</label> |
+<a class="headicon" href="recommend.html">Карты других авторов</a> |
+<label class="headicon" for="modal3">Поделиться сайтом</label>
 
-<div class="postblock">
-<center id="nowrap"><h2>Лучшие карты WarCraft3 <a class="icon" href="https://www.epicwar.com/maps/search/?go=1&n=&a=grylll&c=0&pf=1&p=1&tft=1"><img title="Все версии карт" src="icon/archive.svg" width="24"></a>
-<a class="icon" href="recommend.html"><img title="grylll рекомендует" src="icon/like.svg" width="24"></a>
-<label class="icon" for="modal2"><img title="Написать автору сайта и карт" src="icon/forum.svg" width="24"></label>
-<label class="icon" id="repost" for="modal3"><img title="Репостнуть себе на стену этот сайт" src="icon/like.svg" width="24"></label>
-
-</h2>
 </center>
+</div>
+<br>
+<div class="postblock">
+<center id="nowrap"><h2>Лучшие карты WarCraft3</h2></center>
 
 
 <div class="post">
@@ -259,7 +264,6 @@ vspace="5" hspace="5"></label>
 <label class="modal-x" for="modal2">&times;</label>
 <h3>Связь с автором сайта и карт</h3>
 <a target="_blank" href="https://board.cx/topic/3399">Написать в тред</a><br>
-<a target="_blank" href="https://0chan.hk/%F0%9F%93%A7/0x8d009df6">Написать в ЛС на Нульче</a><br>
 </p></div></div>
 
 <input class="hide" type="checkbox" id="modal3"/>
