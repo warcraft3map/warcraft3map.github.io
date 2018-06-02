@@ -23,7 +23,7 @@ body{
     border-radius: 2px;
     background: #fefefe;
     box-shadow: 0 1px 4px #cccccc;
-	min-width: 500px;
+	min-width: 100px;
 	max-width: 500px;
 	display: block;
 
@@ -40,10 +40,24 @@ a{color:#222;}
 #menu_label:hover, .icon:hover ~ #menu_label {transition: all .2s;opacity: 0.7}
 
 .post-date {position:absolute;top:5px;right:5px;}
+
+.head { position: fixed;top:0;left:0;right:0;background: #fff;min-height:20px;z-index:4;border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;}
+a{color:#222;}
+.headicon {cursor:pointer;text-decoration: none;}
+:focus {outline: 0;}
 </style>
 
 </head>
 <body>
+<div class="head">
+<center>
+<label class="headicon" for="modal2">Связь с автором</label> |
+<label class="headicon" for="war3lan">Как играть по сети</label> |
+<label class="headicon" for="modal3">Поделиться сайтом</label>
+
+</center>
+</div>
+<br>
 
 <div class="postblock">
 <center id="nowrap"><h2>warcraft3map рекомендует 
