@@ -47,6 +47,9 @@ a{color:#222;}
 a{color:#222;}
 .headicon {cursor:pointer;text-decoration: none;}
 :focus {outline: 0;}
+#menuleft {position: fixed;top:30px;left:10px;padding:5px;
+background: #fff;min-height:20px;
+border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
 </style>
 
 </head>
@@ -60,6 +63,12 @@ a{color:#222;}
 </center>
 </div>
 <br>
+
+<div id="menuleft">
+<a class="headicon" title="Наверх" href="#top"><center>^</center></a>
+<a class="headicon" href="index.html"><</a><br>
+<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
+</div>
 
 <div class="postblock">
 <center id="nowrap"><h2>warcraft3map рекомендует 
@@ -156,7 +165,7 @@ vspace="5" hspace="5"></label>
 </div>
 </div>
 
-<a class="post" title="Наверх" href="#top"><center>^</center></a>
+<a class="post" id="bottom" title="Наверх" href="#top"><center>^</center></a>
 </div>
 </body>
 </html>
