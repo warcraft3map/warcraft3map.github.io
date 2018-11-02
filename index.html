@@ -179,45 +179,10 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;max-wid
 <div class="postblock2">
 <center id="nowrap"><h2>Карты для Warcraft 3</h2></center>
 
-
-<script type="text/javascript">
-function fulltime ()
-{
-var time=new Date();
-var newYear=new Date("December,1,2018,00:00:00");
-var totalRemains=(newYear.getTime()-time.getTime());
- 
-if (totalRemains>1){
- 
-var RemainsSec = (parseInt(totalRemains/1000));//сколько всего осталось секунд
-var RemainsFullDays=(parseInt(RemainsSec/(24*60*60)));//осталось дней
-var secInLastDay=RemainsSec-RemainsFullDays*24*3600; //осталось секунд в неполном дне
-var RemainsFullHours=(parseInt(secInLastDay/3600));//осталось часов в неполном дне
-if (RemainsFullHours<10){RemainsFullHours="0"+RemainsFullHours};
-var secInLastHour=secInLastDay-RemainsFullHours*3600;//осталось секунд в неполном часе
-var RemainsMinutes=(parseInt(secInLastHour/60));//осталось минут в неполном часе
-if (RemainsMinutes<10){RemainsMinutes="0"+RemainsMinutes};
-var lastSec=secInLastHour-RemainsMinutes*60;//осталось секунд
-if (lastSec<10){lastSec="0"+lastSec};
- 
-document.getElementById("RemainsFullDays").innerHTML=RemainsFullDays+"дн. ";
-document.getElementById("RemainsFullHours").innerHTML=RemainsFullHours+"час. ";
-document.getElementById("RemainsMinutes").innerHTML=RemainsMinutes+"мин. ";
-document.getElementById("lastSec").innerHTML=lastSec+"сек. ";
-setTimeout('fulltime()',10)
-}
- 
-else{
-document.getElementById("clock").innerHTML='<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview15.png" align="left" vspace="5" hspace="5"></div></label><h2>Праздничное побоище</h2><b>Жанр:</b> Сопровождение<br><b>Версия:</b> 0.1<br><b>Число игроков:</b> 1-10<br><b>Описание:</b> Новогодняя карта! Сопроводите груз с подарками до места высадки.<br><br><div id="nowrap"><a class="icon" title="Скачать" target="_blank" href="/HappyNewYear.w3x"><img src="icon/download.svg"></a><b id="menu_label">С новым годом!</b></div>';
-}
-}
-october
-</script>
-<span class="post" id="clock">До Новогоднего эвента:
-<b><span id="RemainsFullDays"></span></b>
-<b><span id="RemainsFullHours"></span></b>
-</span>
-<script type="text/javascript">fulltime();</script>
+<div >
+<iframe width="500" height="315" src="https://www.youtube.com/embed/RNt2wQe3p1o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center>Анонс новой игры серии WarCraft!</center>
+</div>
 
 <div class="post" id="Majesty">
 <span class="post-date" title="Дата выхода версии карты">29 Oct 2018 13:37</span>
