@@ -17,7 +17,10 @@ body{
 .foc{width:156px;border-radius: 2px;border: 1px solid #cccccc;}
 .postblock{margin: auto;
 min-width: 100px;
-max-width: 500px;}
+max-width: 500px;z-index:2;background-color: #eeeeee;}
+.postblock2{position:relative;
+min-width: 100px;
+max-width: 500px;z-index:2;background-color: #eeeeee;}
 .post{position:relative;
     margin: 10px;
     padding: 10px;
@@ -64,6 +67,16 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
 </div>
 <br>
 
+<link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
+<link id="dyncss" rel="stylesheet" type="text/css" href=""> 
+  <script type="text/javascript"> 
+function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdyncss=([^;]*)/))&&e[1]))return"";document.getElementById("dyncss").href=e;var t=new Date;return t.setFullYear(t.getFullYear()+1),document.cookie=["dyncss=",e,";expires=",t.toGMTString(),";path=/;"].join(""),e}setDynCSS();
+</script>
+
+<a class="theme_switch" onclick="setDynCSS('css/theme1.css')" title="Cмена темы"><p class="switch1"></p></a>
+<a class="theme_switch" onclick="setDynCSS('css/theme2.css')" title="Cмена темы"><p class="switch2"></p></a>
+
+
 <div id="menuleft">
 <a class="headicon" title="Наверх" href="#top"><center>^</center></a>
 <a class="headicon" href="index.html"><</a><br>
@@ -71,7 +84,7 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
 </div>
 
 <div class="postblock">
-
+<div class="postblock2">
 <center id="nowrap"><h2>Карты для Warcraft 3 
 <a class="icon" href="index.html" title="На главную"><</a>
 </h2>
@@ -234,6 +247,6 @@ vspace="5" hspace="5"></label>
 
 <a class="post" id="bottom" title="Наверх" href="#top"><center>^</center></a>
 </div>
-
+</div>
 </body>
 </html>

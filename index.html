@@ -131,7 +131,11 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
 background: #fff;min-height:20px;
 border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;max-width:200px;min-width:100px;}
 </style>
-
+<link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
+<link id="dyncss" rel="stylesheet" type="text/css" href=""> 
+  <script type="text/javascript"> 
+function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdyncss=([^;]*)/))&&e[1]))return"";document.getElementById("dyncss").href=e;var t=new Date;return t.setFullYear(t.getFullYear()+1),document.cookie=["dyncss=",e,";expires=",t.toGMTString(),";path=/;"].join(""),e}setDynCSS();
+</script>
 
 </head>
 <body>
@@ -165,6 +169,7 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;max-wid
 <a class="headicon" href="recommend.html">Другие карты</a>
 <a class="headicon" href="https://xgm.guru/p/wc3/qa" target="_blank">Задать вопрос <br>по WorldEditor</a>
 <hr>
+
 <a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
 </div>
 
@@ -175,6 +180,10 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;max-wid
 <!--
 <iframe id="menuright" src="https://discordapp.com/widget?id=383718529947664387&theme=dark" width="256" height="300" allowtransparency="true" frameborder="0"></iframe>
 -->
+<a class="theme_switch" onclick="setDynCSS('css/theme1.css')" title="Cмена темы"><p class="switch1"></p></a>
+<a class="theme_switch" onclick="setDynCSS('css/theme2.css')" title="Cмена темы"><p class="switch2"></p></a>
+
+
 <div class="postblock">
 <div class="postblock2">
 <center id="nowrap"><h2>Карты для Warcraft 3</h2></center>
