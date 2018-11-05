@@ -120,8 +120,8 @@ a{color:#222;}
 #menuleft {position: fixed;top:20px;left:10px;padding:5px;
 background: #fff;min-height:20px;
 border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
-#menuleft a {display: block;}
-#menuleft a:hover {background-color: #ddd;}
+#menuleft a, #menuright2 a {display: block;}
+#menuleft a:hover, #menuright2 a:hover {background-color: #ddd;}
 
 #menuright {position: fixed;top:20px;right:10px;padding:5px;
 background: #fff;min-height:20px;
@@ -130,6 +130,9 @@ border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
 #menuright2 {position: fixed;top:200px;right:10px;padding:5px;
 background: #fff;min-height:20px;
 border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;max-width:200px;min-width:100px;}
+
+#Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target  {background:#f1ffd0; border: 1px solid #000;
+box-shadow: 0 1px 4px #000;}
 </style>
 <link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
 <link id="dyncss" rel="stylesheet" type="text/css" href=""> 
@@ -176,6 +179,16 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 
 <a id="menuright" href="http://www.donationalerts.ru/r/grylll"><img title="Поддержать картодела+Реквест фичи для карты" src="icon/like.svg" width="152"></a>
 <div>
+<div id="menuright2">
+<h2>Топ карт:</h2>
+<a class="headicon" href="#Majesty">Majesty</a>
+<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
+<a class="headicon" href="#vamp">Вампиризм</a>
+<a class="headicon" href="#Катакомбы">Катакомбы</a>
+<a class="headicon" href="#PUBG">PUBG</a>
+<a class="headicon" href="#pso2">Побег с острова 2</a>
+</div>
+<div>
 
 <!--
 <iframe id="menuright" src="https://discordapp.com/widget?id=383718529947664387&theme=dark" width="256" height="300" allowtransparency="true" frameborder="0"></iframe>
@@ -189,7 +202,6 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 <center id="nowrap" class="h2"><h2>Карты для Warcraft 3</h2></center>
 
 <div >
-<iframe width="500" height="315" src="https://www.youtube.com/embed/hPa6cGO9_kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <center>Анонс новой игры серии WarCraft! <a target="_blank" href="https://xgm.guru/p/wc3/reforget">Обсудить</a></center>
 </div>
 
