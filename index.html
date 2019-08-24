@@ -9,28 +9,27 @@
 <link rel="icon" type="image/png" href="icon/favicon.png">
 <style>
 body{
-    background-color: #eeeeee;
-	color: #222;
+    background-color: #000;
+	color: #fff;
     font-family: "Trebuchet MS", sans-serif;
     margin: 0;
     padding: 0;
     position: relative;line-height: 20px;}
-.foc{width:156px;border-radius: 2px;border: 1px solid #cccccc; box-shadow: 0 1px 4px #cccccc;}
+.foc{width:156px;border-radius: 1px;border: 1px solid #0d0e12; box-shadow: 0 1px 4px #0d0e12;}
 .postblock{margin: auto;
 min-width: 100px;
-max-width: 500px;z-index:2;background-color: #eeeeee;}
+max-width: 500px;z-index:2;background-color: #000;}
 .postblock2{position:relative;
 min-width: 100px;
-max-width: 500px;z-index:2;background-color: #eeeeee;}
+max-width: 500px;z-index:2;background-color: #000;}
 
 
 .post{position:relative;
     margin: 10px;
     padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    background: #fefefe;
-    box-shadow: 0 1px 4px #cccccc;
+    border-radius: 1px;
+    background: #22242b;
+    border: 1px solid #0d0e12; box-shadow: 0 1px 4px #0d0e12;
 	min-width: 100px;
 	max-width: 500px;
 	display: block;
@@ -38,16 +37,11 @@ max-width: 500px;z-index:2;background-color: #eeeeee;}
     }
 	
 	
-a{color:#222;}
+a, .icon{color:#a6f4f2;fill:#a6f4f2;}
+a:hover{text-shadow: 1px 1px 2px, 0 0 1em ;}
 #nowrap{white-space: nowrap;}
-.icon, .icon2{cursor:pointer;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px; box-shadow: 0 1px 4px #cccccc;padding: 5px;margin: 1px;width:24px;height:24px;}
-.icon:hover, .icon2:hover, .icon3:hover{background-color: #eeeeee;}
-.iconno{cursor:help;opacity: 0.7;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px;padding: 5px;margin: 1px;width:24px;height:24px;}
-.icon3{font-size: 20px;cursor:pointer;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px; box-shadow: 0 1px 4px #cccccc;padding: 5px;margin: 1px;height:24px;}
-
-#menu_label {transition: all .2s;display:none;}
-.icon:hover ~ #menu_label {transition: all .2s;display:inline;}
-.icon:hover ~ #iconno {display:none;}
+.icon{cursor:pointer;display: inline-block;margin: -5px;text-decoration: underline;}
+.icon:hover{}
 
 
 .post-date {font-style: italic;margin-left: 10px;color: #cccccc;font-size: 8pt; position:absolute;
@@ -56,87 +50,13 @@ a{color:#222;}
 .post-help {text-decoration:underline;cursor:pointer;}
  
 .hide{display: none;}
-.modal {
-    position: fixed;
-    z-index: 666;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity .3s;
-    background: #eeeeee;
+
+hr{   border: 0;
+    height: 1px;
+    background: #333;
 }
 
-.modal>div {
-    position: relative;
-    width: 90%;
-    max-width: 400px;
-    max-height: 90%;
-    padding: 20px 20px 5px;
-    overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-}
-.modal-x {
-    font-family: serif;
-    position: absolute;
-    z-index: 2;
-    top: 5px;
-    right: 5px;
-    width: 25px;
-    border-radius: 50%;
-    font-size: 36px;
-    line-height: 25px;
-    text-align: center;
-}
-.modal-x2 {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-input:checked+.modal {opacity: 1;right: 0;}
-.button:hover,.modal-x:hover {opacity: 0.7;}
-.modal>div::-webkit-scrollbar {display: none;}
-.modal:hover ~ body {filter: blur(5px);}
-#repost {position:fixed;left:5px;top:5px;}
-
-.image {position:relative;}
-.imagetext {position:absolute;top:115px;left:10px;color:#fff;background:red;padding:2px; border-radius: 2px;}
-.comment {color: #16a085;margin-left:20px;cursor:pointer;font-weight: bold;}
-.comment:hover {opacity: 0.7}
-
-.head { position: fixed;top:0;left:0;right:0;background: #fff;min-height:20px;z-index:4;border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;}
-a{color:#222;}
-.headicon {cursor:pointer;text-decoration: none;}
-:focus {outline: 0;}
-
-#menuleft {position: fixed;top:20px;left:10px;padding:5px;
-background: #fff;min-height:20px;
-border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
-#menuleft a, #menuright2 a {display: block;}
-#menuleft a:hover, #menuright2 a:hover {background-color: #ddd;}
-
-#menuright {position: fixed;top:20px;right:10px;padding:5px;
-background: #fff;min-height:20px;
-border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
-
-#menuright2 {position: fixed;top:200px;right:10px;
-}
-
-.menurightpost {padding:5px;
-background: #fff;min-height:20px;
-border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;
-max-width:200px;min-width:100px;}
-
-
-#Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target {background:#f1ffd0; border: 1px solid #000;box-shadow: 0 1px 4px #000;}
+#Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target, #share:target {background:#22242b; box-shadow: 0 1px 4px #a6f4f2;}
 </style>
 <link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
 <link id="dyncss" rel="stylesheet" type="text/css" href=""> 
@@ -146,70 +66,6 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 
 </head>
 <body>
-<div class="head">
-<center>
-<label class="headicon" for="modal2">Связь с автором</label> |
-<label class="headicon" for="war3lan">Как играть</label> |
-<label class="headicon" for="modal3">Поделиться</label>
-
-</center>
-</div>
-<br>
-
-<div id="menuleft">
-<a class="headicon" title="Наверх" href="#top"><center>^</center></a>
-<hr>
-<a class="headicon" href="#Ncontests">Necro contests</a>
-<a class="headicon" href="#Majesty">Majesty</a>
-<a class="headicon" href="#pumpkinwin">Тыквовин</a>
-<a class="headicon" href="#newyear">Праздничное побоище</a>
-<a class="headicon" href="#vamp">Вампиризм</a>
-<a class="headicon" href="#Катакомбы">Катакомбы</a>
-<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
-<a class="headicon" href="#PUBG">PUBG</a>
-<a class="headicon" href="#pso2">Побег с острова 2</a>
-<a class="headicon" href="#КоролевскаяБитва">Королевская Битва</a>
-<a class="headicon" href="#Тюрьма">Подземная Тюрьма</a>
-<a class="headicon" href="#Прятки">Прятки</a>
-<a class="headicon" href="#zona">Z.O.N.A Life v4</a>
-<a class="headicon" href="#demonprison">Тюрьма демонов</a>
-<a class="headicon" href="#bfa">Битва за Азерот</a>
-<hr>
-<a><label class="headicon" for="modal2">Связь с автором</label></a>
-<a class="headicon" href="recommend.html">Другие карты</a>
-<a class="headicon" href="https://xgm.guru/p/wc3/qa" target="_blank">Задать вопрос <br>по WorldEditor</a>
-
-<hr>
-<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
-</div>
-
-
-<a id="menuright" href="http://www.donationalerts.ru/r/grylll"><img title="Поддержать картодела+Реквест фичи для карты" src="icon/like.svg" width="152"></a>
-<div>
-<div id="menuright2">
-<div class="menurightpost">
-<h2>Топ карт:</h2>
-<a class="headicon" href="#Majesty">Majesty</a>
-<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
-<a class="headicon" href="#vamp">Вампиризм</a>
-<a class="headicon" href="#Катакомбы">Катакомбы</a>
-<a class="headicon" href="#PUBG">PUBG</a>
-<a class="headicon" href="#pso2">Побег с острова 2</a>
-</div>
-<br>
-<div class="menurightpost">
-<h2>Эвенты:</h2>
-<a class="headicon" href="#pumpkinwin">Тыквовин</a>
-<a class="headicon" href="#newyear">Праздничное <br>побоище</a>
-</div>
-</div>
-<div>
-
-<!--
-<iframe id="menuright" src="https://discordapp.com/widget?id=383718529947664387&theme=dark" width="256" height="300" allowtransparency="true" frameborder="0"></iframe>
--->
-<a class="theme_switch" onclick="setDynCSS('css/theme1.css')" title="Cмена темы"><p class="switch1"></p></a>
-<a class="theme_switch" onclick="setDynCSS('css/theme2.css')" title="Cмена темы"><p class="switch2"></p></a>
 
 
 <div class="postblock">
@@ -228,7 +84,6 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 <span class="post-date" title="Дата выхода версии карты">23 Nov 2018 13:56</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview16.png" 
 align="left" vspace="5" hspace="5">
-<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">New</h3>
 </div></label>
 <h2>Necromantic contests</h2>
 <b>Жанр:</b> Королевская битва, Арена<br>
@@ -237,15 +92,12 @@ align="left" vspace="5" hspace="5">
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Даже после смерти вам не найти покоя! Некроманты собрались в древних пещерах, что бы использовать скелетов-аватаров в битве, которая докажет их могущество. Пещера осыпается и среди этого хаоса должен остаться только один. Для победы вам необходимо убить остальных скелетов.<br>
 <br><b>На что похоже:</b> <a href="#КоролевскаяБитва">Королевская Битва</a>, <a href="#PUBG">PUBG</a><br>
-<br>
+
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/287088/c61027fd2739ed56382c5c564f1be8d9dc071da84222c54052576961f3c927a15bf80709/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/287088/44ec872ffaa1b853e339199a197596c3d3498ce88ca86c3d4fb4e7adb16828aa5d61c235/Necromantic%20Contests.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -254,7 +106,6 @@ align="left" vspace="5" hspace="5">
 <span class="post-date" title="Дата выхода версии карты">11 Nov 2018 19:55</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview11.png" 
 align="left" vspace="5" hspace="5">
-<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">TEST</h3>
 </div></label>
 <h2>Majesty</h2>
 <b>Жанр:</b> Cимулятор короля+ORPG<br>
@@ -266,13 +117,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> - <br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286763/fe65989d166546cba8a3a64ec874aa41ac50016591f8759a5b683df81cdfbe965be8893a/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286763/950223ae44fae0a27dd7e0ee1daf8fe67e883fe728f27af5c808c65ad635c5045d61c2d0/Majesty.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -291,13 +139,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> - <br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286752/e9f8b50bb45e1674ca819f0a01fc8068b5e7d4f80dc51e2b675c1a7bb5f840045be82671/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a title="Посмотреть прохождение" class="iconno" id="iconno" target="_blank"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286752/bd7709c1b0a8b37b1918ee33a6f4e41ae75fb388bf05f7c87dd64916aaf5b2205d61c2f6/HappyNewYear.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -316,13 +161,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> - <br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286143/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a title="Посмотреть прохождение" class="iconno" id="iconno" target="_blank"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286143/83ce0577abf5f0d7e8ec1ae9309d5d29052577d339cf46c1ab90dbedf7182de95d61c307/Pumpkinwin.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -341,13 +183,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> Петросянщина, troll and elves, Вампиризм, Kodo TAG<br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286310/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a title="Посмотреть прохождение" class="icon2" id="iconno" target="_blank" href="https://youtu.be/7qmf08TyNlQ"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286310/755f3beaa72a97a29480e6df6a9834c9173607279475d6ea0233b9c3e68074a15d61c31b/Vampirism_Lust.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -366,13 +205,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Бродяги, Выжить в Тайге, <a href="#pso2">Побег с острова2</a><br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/287127/f0cbfaa81d616fae216cca9435fd967f13f016e4a1eef73d0532ad373a1691105bf98cba/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/HLp-5bbAgDU"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon2" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/287127/4ff42995cdbf57b671c25d23547cd1a086bb1d3931468817baa5b33b9327d7845d61c330/Dungeons_and_Catacombs.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -391,13 +227,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Соль и сахар, Маньяк с пилой, Петросянщина, Пропхант, Вампиризм, Тролли против Эльфов, Кодо Таг<br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285306/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/4eCcmF-82cA?list=PLQ9k5LO5Ffu7DZNgRDGYR-PpXZ3r-21nF"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon2" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285306/67a7efd3511d3f08b56cf98966473a4dcd6649ace287240c256da545207858fd5d61c342/Mages_vs_Ork.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -418,13 +251,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> <a href="#КоролевскаяБитва">Королевская Битва</a><br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286532/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/PjRriV-CWDc"><img src="icon/youtube-play.svg"></a>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286532/419d53c4b52b345ffd24397bf0cb353682d9806f487987ab790c45d378410b405d61c358/PUBG.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -443,13 +273,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Тайга, Бродяги, <a href="#Катакомбы">Катакомбы</a><br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285522/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285522/17dca0e358234349e4e4ffd96e626781838906c21dd446e30d71b831559888935d61c367/Survival_on_island.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -468,13 +295,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> <a href="#PUBG">PUBG</a><br>
 
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286105/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286105/ab29fbbc930cbc24085bfa80b178f44ac9b93acaece0f42cd7cdd82c248b67ea5d61c377/Battle_Royale.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -494,13 +318,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Зона лайф, Бродяги<br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286643/9484f7366113de685fd8bcff16f6b474c62fbedc645726d66bb3b7930409b4a05be1e0f2/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286643/29f117fc4da65429c8c81342424c58ba62ae62640220a2c4cc2eeda9f36bed8c5d61c391/PRISON.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -520,13 +341,10 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Прятки новый лес<br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/283534/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/283534/6e8cb9af223763da5d732814bde7360ed08aa67db2da378599299e291b0f0f525d61c3a4/%D0%9F%D1%80%D1%8F%D1%82%D0%BA%D0%B8.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -535,7 +353,6 @@ vspace="5" hspace="5"></label>
 <span class="post-date" title="Дата выхода версии карты">11 Jul 2018 21:20</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview9.jpg" 
 align="left" vspace="5" hspace="5">
-<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
 </div></label>
 <h2>Z.O.N.A Life v4</h2>
 <b>Жанр:</b> Loap, ORPG, RP, Simulator<br>
@@ -545,13 +362,10 @@ align="left" vspace="5" hspace="5">
 <b>Описание:</b> Ролеплей карта про побег из тюрьмы. Игра за начальника напоминает экономический симулятор, игра за заключенного RPG с прокачкой, крафтом и исследованием мира.<br>
 
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/284751/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/284751/ba958bd4ebc90019fe76aede979541c2812bf211c5d12cb6e41763a3549f6d455d61c3b8/Z_O_N_A_Life_v4.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -561,7 +375,6 @@ align="left" vspace="5" hspace="5">
 <span class="post-date" title="Дата выхода версии карты">12 Nov 2018 18:59</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview13.png" 
 align="left" vspace="5" hspace="5">
-<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
 </div></label>
 <h2>Тюрьма Демонов</h2>
 <b>Жанр:</b> Other<br>
@@ -572,13 +385,10 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> <a href="#Тюрьма">Подземная тюрьма</a><br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286796/b505d908aab66c8457cd5f70e1678f56bf2c7ad88925876c2bcc074c30c57a825be9cda8/1/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286796/0274bbfa8521dc6c49061c9a94f1603c1c1eea14b657ae05fdafc6ece5199f1a5d61c3ce/DemonPrison.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
@@ -587,7 +397,6 @@ align="left" vspace="5" hspace="5">
 <span class="post-date" title="Дата выхода версии карты">7 Oct 2018 22:25</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview12.png" 
 align="left" vspace="5" hspace="5">
-<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
 </div></label>
 <h2>Battle for Azeroth / Битва за Азерот</h2>
 <b>Жанр:</b> Other<br>
@@ -599,18 +408,15 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> Survival Chaos<br>
 <br>
 <div id="nowrap">
-<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285952/"><img src="icon/download.svg"></a>
-<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
-<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
-
-<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
-
-<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+<hr>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285952/4b16cac160c74626881d49488a715b7b06355f84b4549f02413e62b22ed1bd635d61c3e1/Battle_for_Azeroth.w3x"> Скачать</a>
+<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
+<a title="Поделиться" href="#share"> Поделиться</a>
 
 </div>
 </div>
 
-<div class="post"><center>
+<div class="post" id="share"><center>
 <script src="js/es5-shims.min.js"></script>
 <script src="js/share.js"></script>
 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,reddit,lj,tumblr,viber,whatsapp,skype,telegram"></div>
@@ -623,51 +429,6 @@ align="left" vspace="5" hspace="5">
 </div>
 </div>
 
-<input class="hide" type="checkbox" id="modal1"/>
-<div class="modal">
-<label class="modal-x2" for="modal1"></label>
-<div class="post">
-<label class="modal-x" for="modal1">&times;</label>
-<h3>Нет видео с прохождением</h3>
-<p>Для этой карты нет видео с прохождением. Но ты можешь записать прохождение и написать <label class="post-help" for="modal2"><a>Cюда</a></label>, тогда я добавлю твое видео к посту.
-</p></div></div>
-
-<input class="hide" type="checkbox" id="modal2"/>
-<div class="modal">
-<label class="modal-x2" for="modal2"></label>
-<div class="post">
-<label class="modal-x" for="modal2">&times;</label>
-<h3>Связь с автором сайта и карт</h3>
-<a target="_blank" href="https://discord.gg/hHH88uT">Дискорд</a><br>
-<br>
-<a target="_blank" href="https://t.me/warcraft3map">Телеграмм канал с мемами</a><br>
-<a target="_blank" href="http://www.donationalerts.ru/r/grylll">Задонатить</a><br>
-</p></div></div>
-
-<input class="hide" type="checkbox" id="modal3"/>
-<div class="modal">
-<label class="modal-x2" for="modal3"></label>
-<div class="post">
-<label class="modal-x" for="modal3">&times;</label>
-<h3>Поделиться</h3>
-<script src="js/es5-shims.min.js"></script>
-<script src="js/share.js"></script>
-<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,reddit,lj,tumblr,viber,whatsapp,skype,telegram"></div>
-
-</p></div></div>
-
-<input class="hide" type="checkbox" id="war3lan"/>
-<div class="modal">
-<label class="modal-x2" for="war3lan"></label>
-<div class="post">
-<label class="modal-x" for="war3lan">&times;</label>
-<h3>Как играть в варкрафт с другими игроками</h3>
-<p><a href="http://lan.garena.com/download/">Сама прога для игры по lan</a><br>
-Регаешься, указываешь в настройках путь к варкарфту, выбираешь регион россия, комната рпг 1 или 2, или 3.
-</p>
-<h3>Скачать варкрафт</h3>
-<p><a href="https://forum.onligamez.ru/world-games/download-warcraft-3/">1.26</a></p>
-</div></div>
 
 
 <p style="font-size: 0px;"> Теги: Карты для Warcraft 3: The Frozen Throne,Карты для Warcraft3, карты для варкрафт, rfhns lkz dfhrhfan, Карты для варкрафт, КАРТЫ ДЛЯ ВАРКРАФТ, X Hero Siege, Vampirism, Evolution, Monsters vs Hunters, DotA,  варкрафт дота, петросянщина, Петры баланс, Zemli Boga, Lordaeron Wars, Angel Arena, World of Angel Arena, X-Hero, Life in Arena, Зомби в Деревне, Enfo's Summer, warcraft 3 карты на развитие, сборник карт для warcraft 3, лучшие карты для warcraft 3, warcraft 3 карты rpg, warcraft 3 карты на удержание, warcraft 3 карты на выживание, карты варкрафт 3 топ
