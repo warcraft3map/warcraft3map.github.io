@@ -69,6 +69,13 @@ hr{   border: 0;
 background: #22242b;min-height:20px;
 border-bottom: 1px solid #22242b;box-shadow: 0 1px 1px #22242b;z-index:1;}
 
+#menuright {position: fixed;top:30px;right:10px;padding:5px;
+background: #22242b;min-height:20px;
+border-bottom: 1px solid #22242b;box-shadow: 0 1px 1px #22242b;z-index:1;}
+.headicon {cursor:pointer;text-decoration: none;}
+#menuright a {display: block;}
+
+
 #Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target, #share:target {background:#22242b; box-shadow: 0 1px 4px #a6f4f2;}
 </style>
 <link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
@@ -86,14 +93,49 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 <center id="nowrap" class="h2"><h2>Карты для Warcraft 3</h2></center>
 
 <div id="menuleft">
-<a class="headicon" title="Наверх" href="#top"><center>▲</center></a>
+<a  title="Наверх" href="#top"><center>▲</center></a>
 <hr>
-<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">▲</center></a>
+<a  href="#bottom"><center style="transform: rotate(-180deg);">▲</center></a>
+</div>
+
+<div id="menuright">
+<a class="headicon" title="Наверх" href="#top"><center>^</center></a>
+<hr>
+<a class="headicon" href="#newyear">🎄 Новогодняя</a>
+<a class="headicon" href="#pumpkinwin">🎃 Тыквовин</a>
+<hr>
+<a class="headicon" href="#Majesty">Majesty</a>
+<a class="headicon" href="#vamp">Вампиризм</a>
+<a class="headicon" href="#Катакомбы">Катакомбы</a>
+<a class="headicon" href="#pso2">Побег с острова 2</a>
+<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
+<a class="headicon" href="#Ncontests">Necromantic contests</a>
+<a class="headicon" href="#PUBG">PUBG</a>
+<a class="headicon" href="#КоролевскаяБитва">Королевская Битва</a>
+<a class="headicon" href="#Прятки">Прятки</a>
+<a class="headicon" href="#zona">Z.O.N.A Life v4</a>
+<a class="headicon" href="#Тюрьма">Подземная Тюрьма</a>
+<a class="headicon" href="#demonprison">Тюрьма Демонов</a>
+<a class="headicon" href="#Прятки">Прятки</a>
+<a class="headicon" href="#bfa">Battle for Azeroth</a>
+<hr>
+<a class="headicon" href="recommend.html">Другие карты</a>
+<hr>
+<a class="headicon" target="_blank" href="https://irinabot.ru/">IrInA Host Bot</a>
+<a class="headicon" target="_blank" href="https://discord.gg/hHH88uT">Мы в дискорде</a>
+<a class="headicon" target="_blank" href="https://vk.com/warcraft3reforge">Мы в вк</a>
+<a class="headicon" target="_blank" href="https://t-do.ru/warcraft3map">Мы в телеграмме</a>
+<hr>
+<script src="js/es5-shims.min.js"></script>
+<script src="js/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,telegram,facebook,odnoklassniki,twitter,viber,whatsapp"></div>
+<hr>
+<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
 </div>
 
 <div class="post">
 
-Вы можете поиграть в данные карты вместе с другими игроками на <a href="https://irinabot.ru/">IrInA Host Bot</a>
+Вы можете поиграть в данные карты вместе с другими игроками на <a target="_blank" href="https://irinabot.ru/">IrInA Host Bot</a>
 <hr>
 <center><a target="_blank" href="https://discord.gg/hHH88uT">Мы в дискорде</a></center>
 <center><a target="_blank" href="https://vk.com/warcraft3reforge">Мы в вк</a></center>
@@ -145,13 +187,13 @@ align="left" vspace="5" hspace="5">
 </div>
 
 <div class="post" id="newyear">
-<span class="post-date" title="Дата выхода версии карты">11 Nov 2018 12:54</span>
+<span class="post-date" title="Дата выхода версии карты">9 Dec 2019 12:43</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview15.png" 
 align="left" vspace="5" hspace="5">
 </div></label>
 <h2>Праздничное побоище</h2>
 <b>Жанр:</b> Сопровождение<br>
-<b>Версия:</b> 0.1<br>
+<b>Версия:</b> 0.2<br>
 <b>Число игроков:</b> 1-11<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Новогодняя карта! Гоблины украли подарки и теперь их преследует северная армия. Сопроводите груз с подарками до безопасной зоны, прорубая себе путь на гоблинском резаке!<br>
@@ -159,7 +201,7 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286752/bd7709c1b0a8b37b1918ee33a6f4e41ae75fb388bf05f7c87dd64916aaf5b2205d61c2f6/HappyNewYear.w3x"> Скачать</a>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299698/"> Скачать</a>
 <a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
 <a title="Поделиться" href="#share"> Поделиться</a>
 
@@ -452,7 +494,7 @@ align="left" vspace="5" hspace="5">
 
 
 
-<p style="font-size: 0px;"> Теги: Карты для Warcraft 3: The Frozen Throne,Карты для Warcraft3, карты для варкрафт, rfhns lkz dfhrhfan, Карты для варкрафт, КАРТЫ ДЛЯ ВАРКРАФТ, X Hero Siege, Vampirism, Evolution, Monsters vs Hunters, DotA,  варкрафт дота, петросянщина, Петры баланс, Zemli Boga, Lordaeron Wars, Angel Arena, World of Angel Arena, X-Hero, Life in Arena, Зомби в Деревне, Enfo's Summer, warcraft 3 карты на развитие, сборник карт для warcraft 3, лучшие карты для warcraft 3, warcraft 3 карты rpg, warcraft 3 карты на удержание, warcraft 3 карты на выживание, карты варкрафт 3 топ
+<p style="font-size: 0px;"> Теги: Карты для Warcraft 3: The Frozen Throne,Карты для Warcraft3, карты для варкрафт, rfhns lkz dfhrhfan, Карты для варкрафт, КАРТЫ ДЛЯ ВАРКРАФТ, X Hero Siege, Vampirism, Evolution, Monsters vs Hunters, DotA,  варкрафт дота, петросянщина, Петры баланс, Zemli Boga, Lordaeron Wars, Angel Arena, World of Angel Arena, X-Hero, Life in Arena, Зомби в Деревне, Enfo's Summer, warcraft 3 карты на развитие, сборник карт для warcraft 3, лучшие карты для warcraft 3, warcraft 3 карты rpg, warcraft 3 карты на удержание, warcraft 3 карты на выживание, карты варкрафт 3 топ, Warcraft 3 Frozen Throne карты, Reign of Chaos карты
 </p>
 
 </body>
