@@ -76,6 +76,17 @@ border-bottom: 1px solid #22242b;box-shadow: 0 1px 1px #22242b;z-index:1;}
 .headicon {cursor:pointer;text-decoration: none;}
 #menuright a {display: block;}
 
+details summary {
+  display: block;  
+  width: 10em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;  
+  cursor: pointer;
+}
+details summary::-webkit-details-marker { 
+  display: none;
+}
 
 #Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target, #share:target {background:#22242b; box-shadow: 0 1px 4px #a6f4f2;}
 </style>
@@ -106,11 +117,11 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 <a class="headicon" href="#pumpkinwin">🎃 Тыквовин</a>
 <hr>
 <a class="headicon" href="#Majesty">Majesty</a>
-<a class="headicon" href="#vamp">Вампиризм</a>
+<a class="headicon" href="#vamp">Vampirism</a>
 <a class="headicon" href="#MagesMustDie">Маги против Орка</a>
 <a class="headicon" href="#Ncontests">Necromantic contests</a>
 <a class="headicon" href="#PUBG">PUBG</a>
-<a class="headicon" href="#КоролевскаяБитва">Королевская Битва</a>
+<a class="headicon" href="#КоролевскаяБитва">Battle royale</a>
 <a class="headicon" href="#pso2">Побег с острова 2</a>
 <a class="headicon" href="#Катакомбы">Катакомбы</a>
 <a class="headicon" href="#demonprison">Тюрьма Демонов</a>
@@ -140,7 +151,7 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 align="left" vspace="5" hspace="5">
 </div></label>
 <h2>Necromantic contests</h2>
-<b>Жанр:</b> Королевская битва, Арена<br>
+<b>Жанр:</b> Battle Royale, Arena<br>
 <b>Версия:</b> 0.3<br>
 <b>Число игроков:</b> 12<br>
 <b>Версия Варкрафта:</b> 1.26<br>
@@ -149,9 +160,12 @@ align="left" vspace="5" hspace="5">
 
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/287088/44ec872ffaa1b853e339199a197596c3d3498ce88ca86c3d4fb4e7adb16828aa5d61c235/Necromantic%20Contests.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/287088/"> Для патча 1.26</a>
+
+</details>
 
 </div>
 </div>
@@ -172,9 +186,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/298180/9621b44dd531b9a43792cbf1c1bcf4b408b9bf939966b99761e644dac00825465dab91b6/Majesty.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://xgm.guru/p/wc3/majestymapwar"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/298180/"> Для патча 1.26</a>
+
+</details>
 
 </div>
 </div>
@@ -194,10 +211,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299698/"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
-
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299698/"> Для патча 1.26</a><br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/300342/"> Для патча 1.31 (Английская)</a>
+</details>
 </div>
 </div>
 
@@ -216,10 +235,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286143/83ce0577abf5f0d7e8ec1ae9309d5d29052577d339cf46c1ab90dbedf7182de95d61c307/Pumpkinwin.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286143/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -238,9 +259,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286310/755f3beaa72a97a29480e6df6a9834c9173607279475d6ea0233b9c3e68074a15d61c31b/Vampirism_Lust.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286310/"> Для патча 1.26</a>
+
+</details>
 
 </div>
 </div>
@@ -260,10 +284,12 @@ vspace="5" hspace="5"></label>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/297589/755d25f4cf06b1f0eb1148d261c1689d85b0c257712c17542bfec6e86c26f4bc5d8ff86e/Dungeons_and_Catacombs.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/297589/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -282,10 +308,12 @@ vspace="5" hspace="5"></label>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285306/67a7efd3511d3f08b56cf98966473a4dcd6649ace287240c256da545207858fd5d61c342/Mages_vs_Ork.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285306/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -306,10 +334,12 @@ vspace="5" hspace="5"></label>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286532/419d53c4b52b345ffd24397bf0cb353682d9806f487987ab790c45d378410b405d61c358/PUBG.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286532/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -328,10 +358,12 @@ vspace="5" hspace="5"></label>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285522/17dca0e358234349e4e4ffd96e626781838906c21dd446e30d71b831559888935d61c367/Survival_on_island.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285522/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -350,10 +382,12 @@ align="left" vspace="5" hspace="5">
 
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286105/ab29fbbc930cbc24085bfa80b178f44ac9b93acaece0f42cd7cdd82c248b67ea5d61c377/Battle_Royale.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286105/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -373,10 +407,12 @@ vspace="5" hspace="5"></label>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/286643/29f117fc4da65429c8c81342424c58ba62ae62640220a2c4cc2eeda9f36bed8c5d61c391/PRISON.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286643/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -391,15 +427,16 @@ vspace="5" hspace="5"></label>
 <b>Число игроков:</b> 9vs3<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Гоблины решили вырубить священный живой лес. Для этого им нужно выловить всех энтов-хранителей. Энтам нужно продержаться 30 минут, что бы помешать гоблинам. Имеется защита от МХ, которую не имеют Прятки новый лес<br>
-<a target="_blank" href="https://www.epicwar.com/maps/284526/">Англоязычная версия карты</a>
 <br><b>На что похоже:</b> Прятки новый лес<br>
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/283534/6e8cb9af223763da5d732814bde7360ed08aa67db2da378599299e291b0f0f525d61c3a4/%D0%9F%D1%80%D1%8F%D1%82%D0%BA%D0%B8.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
-
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/283534/"> Для патча 1.26</a><br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/284526/"> Для патча 1.26 (Английская)</a>
+</details>
 </div>
 </div>
 
@@ -417,10 +454,12 @@ align="left" vspace="5" hspace="5">
 
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/284751/ba958bd4ebc90019fe76aede979541c2812bf211c5d12cb6e41763a3549f6d455d61c3b8/Z_O_N_A_Life_v4.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/284751/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -440,10 +479,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299711/"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299711/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
@@ -463,10 +504,12 @@ align="left" vspace="5" hspace="5">
 <br>
 <div id="nowrap">
 <hr>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/download/285952/4b16cac160c74626881d49488a715b7b06355f84b4549f02413e62b22ed1bd635d61c3e1/Battle_for_Azeroth.w3x"> Скачать</a>
-<a title="Обсудить" target="_blank" href="https://discord.gg/hHH88uT"> Обсудить</a>
-<a title="Поделиться" href="#share"> Поделиться</a>
+<details>
+  <summary title="Скачать"><a>Скачать</a></summary>
+<br>
+<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285952/"> Для патча 1.26</a>
 
+</details>
 </div>
 </div>
 
