@@ -1,15 +1,6 @@
 ﻿<!doctype html>
 <html lang="ru">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117086339-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-117086339-1');
-</script>
 <meta charset="utf-8">
 <title>Карты Warcraft 3</title>
 <meta name="author" content="grylll">
@@ -17,29 +8,29 @@
 <meta name="keywords" content="warcraft3, карты, карты для варкрафт3, варкрафт3, гарена, варкрафт 3, WarCraft III">
 <link rel="icon" type="image/png" href="icon/favicon.png">
 <style>
-
 body{
-    background-color: #000;
-	color: #fff;
+    background-color: #eeeeee;
+	color: #222;
     font-family: "Trebuchet MS", sans-serif;
     margin: 0;
     padding: 0;
     position: relative;line-height: 20px;}
-.foc{width:156px;border-radius: 1px;border: 1px solid #0d0e12; box-shadow: 0 1px 4px #0d0e12;}
+.foc{width:156px;border-radius: 2px;border: 1px solid #cccccc; box-shadow: 0 1px 4px #cccccc;}
 .postblock{margin: auto;
 min-width: 100px;
-max-width: 500px;z-index:2;background-color: #000;}
+max-width: 500px;z-index:2;background-color: #eeeeee;}
 .postblock2{position:relative;
 min-width: 100px;
-max-width: 500px;z-index:2;background-color: #000;}
+max-width: 500px;z-index:2;background-color: #eeeeee;}
 
 
 .post{position:relative;
     margin: 10px;
     padding: 10px;
-    border-radius: 1px;
-    background: #22242b;
-    border: 1px solid #0d0e12; box-shadow: 0 1px 4px #0d0e12;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    background: #fefefe;
+    box-shadow: 0 1px 4px #cccccc;
 	min-width: 100px;
 	max-width: 500px;
 	display: block;
@@ -47,11 +38,16 @@ max-width: 500px;z-index:2;background-color: #000;}
     }
 	
 	
-a, .icon{color:#a6f4f2;fill:#a6f4f2;}
-a:hover{text-shadow: 1px 1px 2px, 0 0 1em ;}
+a{color:#222;}
 #nowrap{white-space: nowrap;}
-.icon{cursor:pointer;display: inline-block;margin: -5px;text-decoration: underline;}
-.icon:hover{}
+.icon, .icon2{cursor:pointer;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px; box-shadow: 0 1px 4px #cccccc;padding: 5px;margin: 1px;width:24px;height:24px;}
+.icon:hover, .icon2:hover, .icon3:hover{background-color: #eeeeee;}
+.iconno{cursor:help;opacity: 0.7;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px;padding: 5px;margin: 1px;width:24px;height:24px;}
+.icon3{font-size: 20px;cursor:pointer;background: #fefefe;display: inline-block;border: 1px solid #cccccc;border-radius: 2px; box-shadow: 0 1px 4px #cccccc;padding: 5px;margin: 1px;height:24px;}
+
+#menu_label {transition: all .2s;display:none;}
+.icon:hover ~ #menu_label {transition: all .2s;display:inline;}
+.icon:hover ~ #iconno {display:none;}
 
 
 .post-date {font-style: italic;margin-left: 10px;color: #cccccc;font-size: 8pt; position:absolute;
@@ -60,35 +56,87 @@ a:hover{text-shadow: 1px 1px 2px, 0 0 1em ;}
 .post-help {text-decoration:underline;cursor:pointer;}
  
 .hide{display: none;}
-
-hr{   border: 0;
-    height: 1px;
-    background: #333;
+.modal {
+    position: fixed;
+    z-index: 666;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s;
+    background: #eeeeee;
 }
 
-#menuleft {position: fixed;top:30px;left:10px;padding:5px;
-background: #22242b;min-height:20px;
-border-bottom: 1px solid #22242b;box-shadow: 0 1px 1px #22242b;z-index:1;}
+.modal>div {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    padding: 20px 20px 5px;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-x {
+    font-family: serif;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: 36px;
+    line-height: 25px;
+    text-align: center;
+}
+.modal-x2 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+input:checked+.modal {opacity: 1;right: 0;}
+.button:hover,.modal-x:hover {opacity: 0.7;}
+.modal>div::-webkit-scrollbar {display: none;}
+.modal:hover ~ body {filter: blur(5px);}
+#repost {position:fixed;left:5px;top:5px;}
 
-#menuright {position: fixed;top:30px;right:10px;padding:5px;
-background: #22242b;min-height:20px;
-border-bottom: 1px solid #22242b;box-shadow: 0 1px 1px #22242b;z-index:1;}
+.image {position:relative;}
+.imagetext {position:absolute;top:115px;left:10px;color:#fff;background:red;padding:2px; border-radius: 2px;}
+.comment {color: #16a085;margin-left:20px;cursor:pointer;font-weight: bold;}
+.comment:hover {opacity: 0.7}
+
+.head { position: fixed;top:0;left:0;right:0;background: #fff;min-height:20px;z-index:4;border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;}
+a{color:#222;}
 .headicon {cursor:pointer;text-decoration: none;}
-#menuright a {display: block;}
+:focus {outline: 0;}
 
-details summary {
-  display: block;  
-  width: 10em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;  
-  cursor: pointer;
-}
-details summary::-webkit-details-marker { 
-  display: none;
+#menuleft {position: fixed;top:20px;left:10px;padding:5px;
+background: #fff;min-height:20px;
+border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
+#menuleft a, #menuright2 a {display: block;}
+#menuleft a:hover, #menuright2 a:hover {background-color: #ddd;}
+
+#menuright {position: fixed;top:20px;right:10px;padding:5px;
+background: #fff;min-height:20px;
+border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;}
+
+#menuright2 {position: fixed;top:200px;right:10px;
 }
 
-#Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target, #share:target {background:#22242b; box-shadow: 0 1px 4px #a6f4f2;}
+.menurightpost {padding:5px;
+background: #fff;min-height:20px;
+border-bottom: 1px solid #cccccc;box-shadow: 0 1px 1px #cccccc;z-index:1;
+max-width:200px;min-width:100px;}
+
+
+#Majesty:target,#pumpkinwin:target,#vamp:target,#Катакомбы:target,#MagesMustDie:target,#PUBG:target,#pso2:target,#КоролевскаяБитва:target,#Тюрьма:target,#Прятки:target,#zona:target,#demonprison:target,#bfa:target,#newyear:target, #Ncontests:target {background:#f1ffd0; border: 1px solid #000;box-shadow: 0 1px 4px #000;}
 </style>
 <link type="text/css" rel="stylesheet" id="theme" href="css/theme1.css" />
 <link id="dyncss" rel="stylesheet" type="text/css" href=""> 
@@ -98,117 +146,186 @@ function setDynCSS(e){if(!arguments.length&&!(e=(e=document.cookie.match(/\bdync
 
 </head>
 <body>
+<div class="head">
+<center>
+<label class="headicon" for="modal2">Связь с автором</label> |
+<label class="headicon" for="war3lan">Как играть</label> |
+<label class="headicon" for="modal3">Поделиться</label>
+
+</center>
+</div>
+<br>
+
+<div id="menuleft">
+<a class="headicon" title="Наверх" href="#top"><center>^</center></a>
+<hr>
+<a class="headicon" href="#Ncontests">Necro contests</a>
+<a class="headicon" href="#Majesty">Majesty</a>
+<a class="headicon" href="#pumpkinwin">Тыквовин</a>
+<a class="headicon" href="#newyear">Праздничное побоище</a>
+<a class="headicon" href="#vamp">Вампиризм</a>
+<a class="headicon" href="#Катакомбы">Катакомбы</a>
+<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
+<a class="headicon" href="#PUBG">PUBG</a>
+<a class="headicon" href="#pso2">Побег с острова 2</a>
+<a class="headicon" href="#КоролевскаяБитва">Королевская Битва</a>
+<a class="headicon" href="#Тюрьма">Подземная Тюрьма</a>
+<a class="headicon" href="#Прятки">Прятки</a>
+<a class="headicon" href="#zona">Z.O.N.A Life v4</a>
+<a class="headicon" href="#demonprison">Тюрьма демонов</a>
+<a class="headicon" href="#bfa">Битва за Азерот</a>
+<hr>
+<a><label class="headicon" for="modal2">Связь с автором</label></a>
+<a class="headicon" href="recommend.html">Другие карты</a>
+<a class="headicon" href="https://xgm.guru/p/wc3/qa" target="_blank">Задать вопрос <br>по WorldEditor</a>
+
+<hr>
+<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
+</div>
+
+
+<a id="menuright" href="http://www.donationalerts.ru/r/grylll"><img title="Поддержать картодела+Реквест фичи для карты" src="icon/like.svg" width="152"></a>
+<div>
+<div id="menuright2">
+<div class="menurightpost">
+<h2>Топ карт:</h2>
+<a class="headicon" href="#Majesty">Majesty</a>
+<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
+<a class="headicon" href="#vamp">Вампиризм</a>
+<a class="headicon" href="#Катакомбы">Катакомбы</a>
+<a class="headicon" href="#PUBG">PUBG</a>
+<a class="headicon" href="#pso1">Побег с острова 1</a>
+<a class="headicon" href="#pso2">Побег с острова 2</a>
+</div>
+<br>
+<div class="menurightpost">
+<h2>Эвенты:</h2>
+<a class="headicon" href="#pumpkinwin">Тыквовин</a>
+<a class="headicon" href="#newyear">Праздничное <br>побоище</a>
+</div>
+</div>
+<div>
+
+<!--
+<iframe id="menuright" src="https://discordapp.com/widget?id=383718529947664387&theme=dark" width="256" height="300" allowtransparency="true" frameborder="0"></iframe>
+-->
+<a class="theme_switch" onclick="setDynCSS('css/theme1.css')" title="Cмена темы"><p class="switch1"></p></a>
+<a class="theme_switch" onclick="setDynCSS('css/theme2.css')" title="Cмена темы"><p class="switch2"></p></a>
 
 
 <div class="postblock">
 <div class="postblock2">
 <center id="nowrap" class="h2"><h2>Карты для Warcraft 3</h2></center>
 
-<div id="menuleft">
-<a  title="Наверх" href="#top"><center>▲</center></a>
-<hr>
-<a  href="#bottom"><center style="transform: rotate(-180deg);">▲</center></a>
-</div>
-
-<div id="menuright">
-<a class="headicon" title="Наверх" href="#top"><center>^</center></a>
-<hr>
-<a class="headicon" href="#newyear">🎄 Новогодняя</a>
-<a class="headicon" href="#pumpkinwin">🎃 Тыквовин</a>
-<hr>
-<a class="headicon" href="#Majesty">Majesty</a>
-<a class="headicon" href="#vamp">Vampirism</a>
-<a class="headicon" href="#MagesMustDie">Маги против Орка</a>
-<a class="headicon" href="#Ncontests">Necromantic contests</a>
-<a class="headicon" href="#PUBG">PUBG</a>
-<a class="headicon" href="#pso2">Побег с острова 2</a>
-<a class="headicon" href="#Катакомбы">Катакомбы</a>
-<a class="headicon" href="#bfa">Battle for Azeroth</a>
-<hr>
-<a class="headicon" href="recommend.html">Другие карты</a>
-<hr>
-<a class="headicon" target="_blank" href="https://irinabot.ru/">IrInA Host Bot</a>
-<a class="headicon" target="_blank" href="https://discord.gg/hHH88uT">Мы в discord</a>
-<a class="headicon" target="_blank" href="https://vk.com/warcraft3reforge">Мы в vk</a>
-<a class="headicon" target="_blank" href="tg://resolve?domain=warcraft3map">Мы в telegram</a>
-<hr>
-<a class="headicon" target="_blank" href="https://www.donationalerts.com/r/grylll">Донат</a>
-<hr>
-<a class="headicon" href="#bottom"><center style="transform: rotate(-180deg);">^</center></a>
-</div>
-
 <div class="post">
-
-Вы можете поиграть в данные карты вместе с другими игроками на <a target="_blank" href="https://irinabot.ru/">IrInA Host Bot</a>
-
+<center>Анонс новой игры серии WarCraft! <a target="_blank" href="https://discord.gg/hHH88uT">Обсудить</a></center>
 </div>
-
-<div class="post" id="Majesty">
-<span class="post-date" title="Дата выхода версии карты">5 Jul 2020 16:52</span>
-<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview11.png" 
-align="left" vspace="5" hspace="5">
-</div></label>
-<h2>Majesty</h2>
-<b>Жанр:</b> Cимулятор короля+ORPG<br>
-<b>Версия:</b> 1.8<br>
-<b>Число игроков:</b> 11<br>
-<b>Версия Варкрафта:</b> 1.26<br>
-<b>Описание:</b> Один игрок играет за Королевство и строит город, другие игроки играют за героев, покупают оружие и экипировку у города, убивают боссов.<br>
-
-<br><b>На что похоже:</b> - <br>
-<br>
-<div id="nowrap">
-<hr>
-
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/306834/"> Для патча 1.26</a>
-
-</details>
-
-</div>
+<div class="post">
+Обновление карт:<br>
+С 20.11.2018 новые версии карт выходить не будут до выхода WarCraft III Reforged! Все карты будут пенесены на Reforged и начнут получать новые версии и обновления в более удобном формате.
 </div>
 
 <div class="post" id="Ncontests">
 <span class="post-date" title="Дата выхода версии карты">23 Nov 2018 13:56</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview16.png" 
 align="left" vspace="5" hspace="5">
+<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">New</h3>
 </div></label>
 <h2>Necromantic contests</h2>
-<b>Жанр:</b> Battle Royale, Arena<br>
+<b>Жанр:</b> Королевская битва, Арена<br>
 <b>Версия:</b> 0.3<br>
 <b>Число игроков:</b> 12<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Даже после смерти вам не найти покоя! Некроманты собрались в древних пещерах, что бы использовать скелетов-аватаров в битве, которая докажет их могущество. Пещера осыпается и среди этого хаоса должен остаться только один. Для победы вам необходимо убить остальных скелетов.<br>
 <br><b>На что похоже:</b> <a href="#КоролевскаяБитва">Королевская Битва</a>, <a href="#PUBG">PUBG</a><br>
-
+<br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/287088/c61027fd2739ed56382c5c564f1be8d9dc071da84222c54052576961f3c927a15bf80709/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/287088/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
+
+<div class="post" id="pso1">
+<span class="post-date" title="Дата выхода версии карты">11 Apr 2021 14:10</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview7.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Побег с острова/Escape from the island </h2>
+<b>Жанр:</b> Survival, Defense<br>
+<b>Версия:</b> 0.1<br>
+<b>Число игроков:</b> 2-11<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b>  Вы - жертва кораблекрушения. Постройте корабль и уплывите с этого острова.<br>
+You are a victim of a shipwreck. Build a ship and sail away from this isl<br>
+<br><b>На что похоже:</b> Тайга, Бродяги, <a href="#Катакомбы">Катакомбы</a><br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/313198/785ad930ba2a7bda377ae3e3a947fd85480486b3946af47efa6d6007809ee6556073034c/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
+
+<div class="post" id="Majesty">
+<span class="post-date" title="Дата выхода версии карты">11 Nov 2018 19:55</span>
+<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview11.png" 
+align="left" vspace="5" hspace="5">
+<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">TEST</h3>
+</div></label>
+<h2>Majesty</h2>
+<b>Жанр:</b> Cимулятор короля+ORPG<br>
+<b>Версия:</b> 1.6<br>
+<b>Число игроков:</b> 11<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> Один игрок играет за Королевство и строит город, другие игроки играют за героев, покупают оружие и экипировку у города, убивают боссов.<br>
+<a target="_blank" href="https://xgm.guru/files/1800/212795/majesty.mix">mix архив для карты</a>
+<br><b>На что похоже:</b> - <br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286763/fe65989d166546cba8a3a64ec874aa41ac50016591f8759a5b683df81cdfbe965be8893a/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
 
 </div>
 </div>
 
 <div class="post" id="newyear">
-<span class="post-date" title="Дата выхода версии карты">9 Dec 2019 12:43</span>
+<span class="post-date" title="Дата выхода версии карты">11 Nov 2018 12:54</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview15.png" 
 align="left" vspace="5" hspace="5">
 </div></label>
 <h2>Праздничное побоище</h2>
 <b>Жанр:</b> Сопровождение<br>
-<b>Версия:</b> 0.2<br>
+<b>Версия:</b> 0.1<br>
 <b>Число игроков:</b> 1-11<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Новогодняя карта! Гоблины украли подарки и теперь их преследует северная армия. Сопроводите груз с подарками до безопасной зоны, прорубая себе путь на гоблинском резаке!<br>
-<br><b>На что похоже:</b> <a href="#pumpkinwin">Тыквовин</a><br>
+<br><b>На что похоже:</b> - <br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286752/e9f8b50bb45e1674ca819f0a01fc8068b5e7d4f80dc51e2b675c1a7bb5f840045be82671/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a title="Посмотреть прохождение" class="iconno" id="iconno" target="_blank"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/299698/"> Для патча 1.26</a><br>
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/300342/"> Для патча 1.31 (Английская)</a>
-</details>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
@@ -223,59 +340,67 @@ align="left" vspace="5" hspace="5">
 <b>Число игроков:</b> 1-10<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Карта для Хэллоуина! Сопроводите телегу с конфетами через зловещий лес.<br>
-<br><b>На что похоже:</b> <a href="#newyear">Праздничное побоище</a><br>
+<br><b>На что похоже:</b> - <br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286143/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a title="Посмотреть прохождение" class="iconno" id="iconno" target="_blank"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286143/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
 <div class="post" id="vamp">
-<span class="post-date" title="Дата выхода версии карты">8 Jul 2020 14:22</span>
+<span class="post-date" title="Дата выхода версии карты">23 Oct 2018 20:53</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview10.jpg" 
 align="left" vspace="5" hspace="5">
 </div></label>
 <h2>Vampirism: Lust / Вампиризм</h2>
 <b>Жанр:</b> TAG<br>
-<b>Версия:</b> 2.5<br>
+<b>Версия:</b> 2.4<br>
 <b>Число игроков:</b> 1-12<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Карта для конкурса. По сюжету ваш герой сжег усадьбу опасного Графа-вампира, который теперь жаждет отомстить вам. Естественно, он придет мстить к вам ночью потому что вампиры боятся солнечного света. Ваш единственный шанс спастись - построить корабль и убежать с этого зловещего острова. Это Петросянщина/Вампиризм, где вместо Петра/Вампира выступает бот.<br>
 <br><b>На что похоже:</b> Петросянщина, troll and elves, Вампиризм, Kodo TAG<br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286310/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a title="Посмотреть прохождение" class="icon2" id="iconno" target="_blank" href="https://youtu.be/7qmf08TyNlQ"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/306903/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
 
 </div>
 </div>
 
 <div class="post" id="Катакомбы">
-<span class="post-date" title="Дата выхода версии карты">29 Sep 2019 00:18</span>
+<span class="post-date" title="Дата выхода версии карты">24 Nov 2018 17:39</span>
 <label for="2" class="button"><img class="foc" src="img/war3mapPreview4.jpg" 
 align="left" 
 vspace="5" hspace="5"></label>
 <h2>Катакомбы</h2>
 <b>Жанр:</b> Survival, Defense<br>
-<b>Версия:</b> 4<br>
+<b>Версия:</b> 3.8<br>
 <b>Число игроков:</b> 2-11<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Легион Демонов уничтожил все живое в Азероте. Теперь вы вынуждены скрываться под землей и выживать. Это необычная карта на удержание, где победит последний выживший. Вам предстоит построить поселение, рожать и выращивать воинов, собирать пищу и ресурсы, отбивать ночные атаки монстров.<br>
 <br><b>На что похоже:</b> Бродяги, Выжить в Тайге, <a href="#pso2">Побег с острова2</a><br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/287127/f0cbfaa81d616fae216cca9435fd967f13f016e4a1eef73d0532ad373a1691105bf98cba/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/HLp-5bbAgDU"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/297589/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon2" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
@@ -293,11 +418,14 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> Соль и сахар, Маньяк с пилой, Петросянщина, Пропхант, Вампиризм, Тролли против Эльфов, Кодо Таг<br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285306/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/4eCcmF-82cA?list=PLQ9k5LO5Ffu7DZNgRDGYR-PpXZ3r-21nF"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285306/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon2" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
@@ -317,43 +445,176 @@ vspace="5" hspace="5"></label>
 <br><b>На что похоже:</b> <a href="#КоролевскаяБитва">Королевская Битва</a><br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286532/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<a class="icon2" id="iconno" title="Посмотреть прохождение" target="_blank" href="https://youtu.be/PjRriV-CWDc"><img src="icon/youtube-play.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286532/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
 <div class="post" id="pso2">
-<span class="post-date" title="Дата выхода версии карты">8 Jul 2020 14:22</span>
+<span class="post-date" title="Дата выхода версии карты">19 Sep 2018 08:31</span>
 <label for="2" class="button"><img class="foc" src="img/war3mapPreview7.jpg" 
 align="left" 
 vspace="5" hspace="5"></label>
 <h2>Побег с острова 2</h2>
 <b>Жанр:</b> Survival, Defense<br>
-<b>Версия:</b> 2.4<br>
+<b>Версия:</b> 2.3<br>
 <b>Число игроков:</b> 2-11<br>
 <b>Версия Варкрафта:</b> 1.26<br>
 <b>Описание:</b> Выживание, в котором вам необходимо отстроить свое поселение и защитить его. Победить можно уничтожив других игроков, либо построив корабль. Это необычная карта на удержание, где победит последний выживший. Вам предстоит построить поселение, рожать и выращивать воинов, собирать пищу и ресурсы, отбивать ночные атаки монстров.<br>
 <br><b>На что похоже:</b> Тайга, Бродяги, <a href="#Катакомбы">Катакомбы</a><br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285522/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
 
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/306904/"> Для патча 1.26</a>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
 
+</div>
+</div>
+
+<div class="post" id="КоролевскаяБитва">
+<span class="post-date" title="Дата выхода версии карты">15 Oct 2018 20:25</span>
+<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview8.jpg" 
+align="left" vspace="5" hspace="5">
+</div></label>
+<h2>Королевская Битва</h2>
+<b>Жанр:</b> Battle Royale, Arena<br>
+<b>Версия:</b> 1.2<br>
+<b>Число игроков:</b> 2-12<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> «Королевская битва» сталкивает игроков без снаряжения на ограниченной карте. Игроки должны искать на карте оружие и уничтожать противников, пока в игре не останется только один.<br>
+<br><b>На что похоже:</b> <a href="#PUBG">PUBG</a><br>
+
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/286105/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
 
 </div>
 </div>
 
 
+<div class="post" id="Тюрьма">
+<span class="post-date" title="Дата выхода версии карты">6 Nov 2018 15:30</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview5.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Подземная Тюрьма</h2>
+<b>Жанр:</b> Simulator, Survival, Defense<br>
+<b>Версия:</b> 3.4.1<br>
+<b>Число игроков:</b> 4-11vs1<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> Один игрок - тюремщик. Другие игроки - заключенные. Цель тюремщика собрать золото и не допустить бунта и побега зеков. Цель зеков - сбежать.<br>
+<br><b>На что похоже:</b> Зона лайф, Бродяги<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286643/9484f7366113de685fd8bcff16f6b474c62fbedc645726d66bb3b7930409b4a05be1e0f2/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
+
+<div class="post" id="Прятки">
+<span class="post-date" title="Дата выхода версии карты">4 Jul 2018 14:09</span>
+<label for="2" class="button"><img class="foc" src="img/war3mapPreview3.jpg" 
+align="left" 
+vspace="5" hspace="5"></label>
+<h2>Прятки</h2>
+<b>Жанр:</b> TAG<br>
+<b>Версия:</b> 0.6<br>
+<b>Число игроков:</b> 9vs3<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> Гоблины решили вырубить священный живой лес. Для этого им нужно выловить всех энтов-хранителей. Энтам нужно продержаться 30 минут, что бы помешать гоблинам. Имеется защита от МХ, которую не имеют Прятки новый лес<br>
+<a target="_blank" href="https://www.epicwar.com/maps/284526/">Англоязычная версия карты</a>
+<br><b>На что похоже:</b> Прятки новый лес<br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/283534/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
+
+<div class="post" id="zona">
+<span class="post-date" title="Дата выхода версии карты">11 Jul 2018 21:20</span>
+<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview9.jpg" 
+align="left" vspace="5" hspace="5">
+<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
+</div></label>
+<h2>Z.O.N.A Life v4</h2>
+<b>Жанр:</b> Loap, ORPG, RP, Simulator<br>
+<b>Версия:</b> 4.4.1<br>
+<b>Число игроков:</b> 6-11vs1<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> Ролеплей карта про побег из тюрьмы. Игра за начальника напоминает экономический симулятор, игра за заключенного RPG с прокачкой, крафтом и исследованием мира.<br>
+
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/284751/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
+
+
+<div class="post" id="demonprison">
+<span class="post-date" title="Дата выхода версии карты">12 Nov 2018 18:59</span>
+<label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview13.png" 
+align="left" vspace="5" hspace="5">
+<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
+</div></label>
+<h2>Тюрьма Демонов</h2>
+<b>Жанр:</b> Other<br>
+<b>Версия:</b> 0.4<br>
+<b>Число игроков:</b> 5-11<br>
+<b>Версия Варкрафта:</b> 1.26<br>
+<b>Описание:</b> Продолжение идей Подземной тюрьмы. Генератор защитного поля выработал ресурс и колония демонов с орками рабами осталась без защиты. Демонам срочно нужно перезаправить генератор, а для орков это удачный шанс сбежать.<br>
+<br><b>На что похоже:</b> <a href="#Тюрьма">Подземная тюрьма</a><br>
+<br>
+<div id="nowrap">
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/rate/286796/b505d908aab66c8457cd5f70e1678f56bf2c7ad88925876c2bcc074c30c57a825be9cda8/1/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
+
+<a title="Обсудить" class="icon" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
+
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
+</div>
+</div>
 
 <div class="post" id="bfa">
 <span class="post-date" title="Дата выхода версии карты">7 Oct 2018 22:25</span>
 <label for="2" class="button"><div class="image"><img class="foc" src="img/war3mapPreview12.png" 
 align="left" vspace="5" hspace="5">
+<h3 class="imagetext" title="Карта содержит множество багов и недоработок. О найденный багах сообщите автору.">BETA</h3>
 </div></label>
 <h2>Battle for Azeroth / Битва за Азерот</h2>
 <b>Жанр:</b> Other<br>
@@ -365,33 +626,78 @@ align="left" vspace="5" hspace="5">
 <br><b>На что похоже:</b> Survival Chaos<br>
 <br>
 <div id="nowrap">
-<hr>
+<a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285952/"><img src="icon/download.svg"></a>
+<b id="menu_label">Не забудь поставить лайк на epicwar, бро <img src="icon/like.svg"></b>
+<label class="iconno" id="iconno" for="modal1" title="Посмотреть прохождение"><img src="icon/youtube-play.svg"></label>
 
-<a title="Скачать" target="_blank" href="https://www.epicwar.com/maps/285952/"> Для патча 1.26</a>
+<a title="Обсудить" class="icon2" id="iconno" target="_blank" href="https://discord.gg/hHH88uT"><img src="icon/forum.svg"></a>
 
-</details>
+<label class="icon" id="iconno" for="modal3" style="position:absolute;right:8px;"><img title="Поделиться" src="icon/like.svg" width="24"></label>
+
 </div>
 </div>
 
-<div class="post" id="share"><center>
-Поделиться:
-<hr>
+<div class="post"><center>
 <script src="js/es5-shims.min.js"></script>
 <script src="js/share.js"></script>
-<div class="ya-share2" data-services="vkontakte,telegram,facebook,odnoklassniki,twitter,viber,whatsapp"></div>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,reddit,lj,tumblr,viber,whatsapp,skype,telegram"></div>
 </center>
 </div>
-<a class="post" href="arhive.html"><center><h2>Архив</h2></center></a>
+
 <a class="post" href="recommend.html"><center><h2>Карты других авторов</h2></center></a>
 
 <a class="post" id="bottom" title="Наверх" href="#top"><center>^</center></a>
 </div>
 </div>
 
+<input class="hide" type="checkbox" id="modal1"/>
+<div class="modal">
+<label class="modal-x2" for="modal1"></label>
+<div class="post">
+<label class="modal-x" for="modal1">&times;</label>
+<h3>Нет видео с прохождением</h3>
+<p>Для этой карты нет видео с прохождением. Но ты можешь записать прохождение и написать <label class="post-help" for="modal2"><a>Cюда</a></label>, тогда я добавлю твое видео к посту.
+</p></div></div>
 
+<input class="hide" type="checkbox" id="modal2"/>
+<div class="modal">
+<label class="modal-x2" for="modal2"></label>
+<div class="post">
+<label class="modal-x" for="modal2">&times;</label>
+<h3>Связь с автором сайта и карт</h3>
+<a target="_blank" href="https://discord.gg/hHH88uT">Дискорд</a><br>
+<br>
+<a target="_blank" href="https://t.me/warcraft3map">Телеграмм канал с мемами</a><br>
+<a target="_blank" href="http://www.donationalerts.ru/r/grylll">Задонатить</a><br>
+</p></div></div>
 
-<p style="font-size: 0px;"> Теги: Карты для Warcraft 3: The Frozen Throne,Карты для Warcraft3, карты для варкрафт, rfhns lkz dfhrhfan, Карты для варкрафт, КАРТЫ ДЛЯ ВАРКРАФТ, X Hero Siege, Vampirism, Evolution, Monsters vs Hunters, DotA,  варкрафт дота, петросянщина, Петры баланс, Zemli Boga, Lordaeron Wars, Angel Arena, World of Angel Arena, X-Hero, Life in Arena, Зомби в Деревне, Enfo's Summer, warcraft 3 карты на развитие, сборник карт для warcraft 3, лучшие карты для warcraft 3, warcraft 3 карты rpg, warcraft 3 карты на удержание, warcraft 3 карты на выживание, карты варкрафт 3 топ, Warcraft 3 Frozen Throne карты, Reign of Chaos карты
+<input class="hide" type="checkbox" id="modal3"/>
+<div class="modal">
+<label class="modal-x2" for="modal3"></label>
+<div class="post">
+<label class="modal-x" for="modal3">&times;</label>
+<h3>Поделиться</h3>
+<script src="js/es5-shims.min.js"></script>
+<script src="js/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,reddit,lj,tumblr,viber,whatsapp,skype,telegram"></div>
+
+</p></div></div>
+
+<input class="hide" type="checkbox" id="war3lan"/>
+<div class="modal">
+<label class="modal-x2" for="war3lan"></label>
+<div class="post">
+<label class="modal-x" for="war3lan">&times;</label>
+<h3>Как играть в варкрафт с другими игроками</h3>
+<p><a href="http://lan.garena.com/download/">Сама прога для игры по lan</a><br>
+Регаешься, указываешь в настройках путь к варкарфту, выбираешь регион россия, комната рпг 1 или 2, или 3.
 </p>
+<h3>Скачать варкрафт</h3>
+<p><a href="https://forum.onligamez.ru/world-games/download-warcraft-3/">1.26</a></p>
+</div></div>
 
+
+<p style="font-size: 0px;"> Теги: Карты для Warcraft 3: The Frozen Throne,Карты для Warcraft3, карты для варкрафт, rfhns lkz dfhrhfan, Карты для варкрафт, КАРТЫ ДЛЯ ВАРКРАФТ, X Hero Siege, Vampirism, Evolution, Monsters vs Hunters, DotA,  варкрафт дота, петросянщина, Петры баланс, Zemli Boga, Lordaeron Wars, Angel Arena, World of Angel Arena, X-Hero, Life in Arena, Зомби в Деревне, Enfo's Summer, warcraft 3 карты на развитие, сборник карт для warcraft 3, лучшие карты для warcraft 3, warcraft 3 карты rpg, warcraft 3 карты на удержание, warcraft 3 карты на выживание, карты варкрафт 3 топ
+</p>
 </body>
 </html>
