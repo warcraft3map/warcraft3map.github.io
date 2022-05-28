@@ -14,7 +14,9 @@ body{
     background-color: #0e1621;
 	color: #fff;
     font-family: "Roboto", sans-serif;
-line-height: 20px;}
+line-height: 20px;
+transition:.2s;
+}
 
 .postblock{margin: auto;
 min-width: 100px;
@@ -54,6 +56,17 @@ hr{ border: 0;
 	max-width: 800px;
 }
 
+#discord {
+background: #7289da;
+border: 1px solid #17212b;
+border-radius: 1px;
+}
+#discord:target {border: 0;display: block;}
+
+.headicon {
+text-decoration: underline;
+}
+
 </style>
 </head>
 <body>
@@ -82,7 +95,11 @@ News:<br>
 </div>
 <div class="post">
 Contacts:<br>
-<a class="headicon" target="_blank" href="https://t.me/warcraft3map/2">discord</a> | <a class="headicon" target="_blank" href="https://t.me/warcraft3map">telegram</a><br>
+<a class="headicon" target="_blank" href="https://t.me/warcraft3map">telegram</a> | 
+<span class="headicon"><a onclick="this.parentNode.innerHTML='<iframe src=\'https://discord.com/widget?id=383718529947664387&theme=dark\' width=\'100%\' height=\'148\' frameborder=\'0\' id=\'discord\'></iframe> ';">
+discord</a></span>
+<br>
+
 
 </div>
 <div class="post">
@@ -133,7 +150,6 @@ Others:<br>
  <a class="icon" title="Скачать" target="_blank" href="https://www.epicwar.com/maps/search/?go=1&n=Desert+Fury&a=&c=0&pf=1&p=1&roc=1&tft=1"> Desert Fury</a><br>
 </div>
   </details>
-
 <hr>
 <a class="post" id="bottom" title="Наверх" href="#top"><center>^</center></a>
 </div>
